@@ -1,0 +1,25 @@
+==============ANOTE AQUI AS BIBLIOTECAS UTILIZADAS AO DECORRER DO PROJETO==============
+
+React Native Paper{
+    npm install react-native-paper
+    npm install react-native-safe-area-context
+    npm install react-native-vector-icons
+
+    Dependencias{
+        Suporte IOS:
+        npx pod-install
+    }
+}
+
+Expo Cli{
+    npm install -g expo-cli
+}
+
+Expo Router{
+    npm install expo-router
+
+    Dependencias{
+        npm install @react-navigation/native @react-navigation/native-stack
+        expo install react-native-screens react-native-safe-area-context
+    }
+}

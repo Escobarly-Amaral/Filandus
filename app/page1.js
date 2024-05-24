@@ -1,10 +1,18 @@
 import { Text, View, StyleSheet, ImageBackground, Dimensions } from 'react-native';
 import { useNavigation } from 'expo-router';
 import React from 'react';
+import BtnPage from '../components/buttonToPage.js';
+import Text1 from '../components/textos/displayLarge.js';
+import Text2 from '../components/textos/bodyLarge.js';
+import Text3 from '../components/textos/headlineLarge.js';
+import Text4 from '../components/textos/headlineSmall.js';
+import Text5 from '../components/textos/labelLarge.js';
+import Text6 from '../components/textos/titleLarge.js';
+import Text7 from '../components/textos/titleSmall.js';
 
 const { width, height } = Dimensions.get('window');
 
-const About = () => {
+const page1 = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.viewf}>
@@ -12,21 +20,19 @@ const About = () => {
         <Text style={{fontSize: '2.5em', color: '#ffffff', fontWeight: 'bold',}}>Bem-vindo(a)</Text>
         <Text style={{fontSize: '2.5em', color: '#ffffff', marginBottom: '10%', fontWeight: 'bold',}}>ao Filandus!</Text>
       </View>
-      <ImageBackground style={styles.image} source={require('../assets/images/Filandus/2.png')}></ImageBackground>
-      <Text style={{fontSize: '1.8em', color: '#ffffff', fontWeight: '500', position: 'absolute', marginTop: '9em', textAlign: 'center',}}>Para ter acesso ao aplicativo, peça o email e a senha para seu (sua) PDT.</Text>
+      <ImageBackground style={styles.image} source={require('../assets/images/Filandus/3.png')}></ImageBackground>
+      <Text4 content="Para ter acesso ao aplicativo, peça o email e a senha para seu (sua) PDT.A senha e email não poderão ser alterados. Cada sala terá apenas um email."/>
+      <BtnPage page="/page2"/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   image: {
-    marginTop: '4em',
+    marginTop: '50%',
+    marginBottom: '-40%',
     width: '80vw',
     height: '55%',
-  },
-  imagebg: {
-    width: '100%',
-    height: '50%'
   },
   Ellipse27:{
     position: 'absolute',
@@ -48,7 +54,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
   }
 });
 
-export default About;
+export default page1;

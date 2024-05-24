@@ -1,17 +1,17 @@
 // pages/index.js
 import { Text, View, StyleSheet, ImageBackground, Dimensions } from 'react-native';
-import { useNavigation } from 'expo-router';
 import React from 'react';
+import BtnPage from '../components/buttonToPage.js';
+import { useNavigation } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');
 
 const Home = () => {
   const navigation = useNavigation();
-  
   return (
     <View style={styles.viewf}>
       <ImageBackground style={styles.imagebg} source={require('../assets/images/Filandus/logo.png')}></ImageBackground>
-      <Text style={{fontSize: '2.5em'}} onPress={() => navigation.navigate('about')}>Proximo</Text>
+      <BtnPage page="/ApresenInicial"/>
     </View>
   );
 }
